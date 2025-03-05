@@ -1,0 +1,34 @@
+# bio_task:
+#   description: >
+#     question: {question}
+#   expected_output: >
+#     research about this question based on your expertise
+#   agent: bioinformatics_expert
+
+gcloud_task:
+  description: >
+    question: {question}
+  expected_output: >
+    research about this question based on your expertise
+  agent: google_cloud_batch_expert
+
+github_task:
+  description: >
+    question: {question}
+  expected_output: >
+    research about this question in github repository
+  agent: github_analyst
+
+doc_task:
+  description: >
+    question: {question}
+  expected_output: >
+    research about this question in provided documentation if needed search on web
+  agent: documentation_specialist
+
+detailed_answer:
+  description: >
+    Review and synthesize the analyses provided by the gcloud batch expert agent and github analyst agent.
+    Combine these insights to form a comprehensive answer to the {question}
+  expected_output: >
+    Detailed answer with sources including code examples, documentation references, and repository analysis where applicable
