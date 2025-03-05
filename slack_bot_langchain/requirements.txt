@@ -1,0 +1,30 @@
+# Framework
+langchain
+langchain-community
+langchain-openai
+
+# Document Processing
+unstructured
+pdfminer.six
+pypandoc
+
+# Vector DB
+chromadb
+pinecone-client
+
+# LLM
+openai
+tiktoken
+
+# Slack
+slack-bolt
+python-dotenv
+
+# Data Sources
+google-auth
+google-api-python-client
+atlassian-python-api
+
+# Utilities
+numpy
+python-magic
