@@ -1,8 +1,9 @@
 # Framework
 langchain
-langchain-community
-langchain-openai
-langchain-groq
+langchain_community
+langchain_openai
+langchain_groq
+langchain_core
 streamlit
 
 # Document Processing
