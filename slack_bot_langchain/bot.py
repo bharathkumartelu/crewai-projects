@@ -40,6 +40,7 @@ qa = create_retrieval_chain(
 )
 
 print(qa.invoke({"input": "summary of software development space", }))
+# Test Manoj
 # Handle messages
 # @app.event("app_mention")
 # def handle_mention(event, say):
