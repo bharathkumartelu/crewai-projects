@@ -22,11 +22,14 @@ confluence_loader = ConfluenceLoader(
     url=os.getenv("CONFLUENCE_URL"),
     username=os.getenv("CONFLUENCE_USER"),
     api_key=os.getenv("CONFLUENCE_API_TOKEN"),
-    space_key=os.getenv("CONFLUENCE_SPACE")
+    space_key=os.getenv("CONFLUENCE_SPACE"),
+    max_pages=5000
 )
 print(os.getenv("CONFLUENCE_URL"))
 
 confluence_docs = confluence_loader.load()
+
+print(f"Retrieved {len(confluence_docs)} documents")
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 all_splits = text_splitter.split_documents(confluence_docs)

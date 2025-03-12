@@ -5,6 +5,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain import hub
+import streamlit as st
 import os
 
 from dotenv import load_dotenv
@@ -38,8 +39,15 @@ qa = create_retrieval_chain(
     retriever,
     combine_docs_chain
 )
+st.title("slack bot langchain")
 
-print(qa.invoke({"input": "summary of software development space", }))
+input_text=st.text_input("ask a question")
+
+if input_text:
+    st.write(qa.invoke({"input": input_text}))
+
+
+# print(qa.invoke({"input": "How to run reference pipeline", }))
 # Test Manoj
 # Handle messages
 # @app.event("app_mention")
