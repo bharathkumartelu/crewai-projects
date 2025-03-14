@@ -5,6 +5,10 @@ langchain_openai
 langchain_groq
 langchain_core
 streamlit
+langgraph
+langchain_chroma
+langchain_google_community
+google_auth_oauthlib
 
 # Document Processing
 unstructured
